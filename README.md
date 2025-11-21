@@ -46,7 +46,7 @@ Balance your training load with your capacity.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/run-insights-app.git
+   git clone https://github.com/m-ravin/run-insights-app.git
    cd run-insights-app
    ```
 
