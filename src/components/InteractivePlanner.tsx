@@ -68,7 +68,7 @@ export function InteractivePlanner() {
             </div>
 
             <div className="mt-4 text-center text-sm font-medium text-red-500">
-                Unlock multi-week planning with Premium +
+
             </div>
         </div>
     );

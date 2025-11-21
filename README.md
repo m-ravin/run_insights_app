@@ -1,38 +1,79 @@
-#### This is a vibe coding done using Antigravity
+# Run Insights App 🏃‍♂️
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A powerful, Strava-integrated dashboard for runners who want deeper insights into their training, injury risk, and performance.
 
-## Getting Started
+![Dashboard Overview](public/images/dashboard-overview.png)
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. Advanced Training Status
+Get an instant snapshot of your current training state.
+- **Run Health**: Visual indicator based on your Acute:Chronic Workload Ratio (ACR).
+- **Run Fitness**: Tracks your chronic load trend to see if you are improving, maintaining, or detraining.
+- **Daily Capacity**: Know exactly how much you can run today without increasing injury risk.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Injury Risk Analysis
+Visualize your injury risk over time with our advanced ACR model.
+- **Dynamic Risk Zones**: See when you are in the "Sweet Spot" (Green), "Overreaching" (Yellow), or "High Risk" (Red).
+- **Historical Tracking**: Monitor your risk trends over the last 90 days.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Injury Risk Chart](public/images/injury-risk-chart.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Smart Load Management
+Balance your training load with your capacity.
+- **Weekly Mileage & Zones**: Compare your rolling weekly mileage against your dynamic capacity limits.
+- **Interactive Planner**: Plan your runs for the week and see if they fit within your safe limits.
 
-## Learn More
+![Weekly Mileage Chart](public/images/weekly-mileage-chart.png)
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Date Handling**: [date-fns](https://date-fns.org/)
+- **Integration**: [Strava API](https://developers.strava.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏁 Getting Started
 
-## Deploy on Vercel
+### Prerequisites
+- Node.js 18+
+- A Strava Account
+- Strava API Application (Client ID & Secret)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/run-insights-app.git
+   cd run-insights-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**
+   Create a `.env.local` file in the root directory:
+   ```env
+   STRAVA_CLIENT_ID=your_client_id
+   STRAVA_CLIENT_SECRET=your_client_secret
+   STRAVA_REDIRECT_URI=http://localhost:3000/api/strava/callback
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open the app**
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🔒 Privacy & Security
+- Your Strava tokens are stored securely in **HTTP-Only cookies**.
+- Data is processed locally in your browser or strictly for your session.
+
+## 📄 License
+MIT
